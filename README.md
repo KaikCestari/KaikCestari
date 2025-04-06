@@ -21,7 +21,7 @@
 ![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 ### 📲 Onde me encontrar
-- 📷 [Instagram](https://www.instagram.com/kaikcestari7/club)
+- (![image](https://github.com/user-attachments/assets/49eecdf2-42b2-4fe1-a082-906dd5757385)) [Instagram](https://www.instagram.com/kaikcestari7/club)
 - 🎵 [TikTok](https://www.tiktok.com/@devkaik7)
 - 💼 [LinkedIn](https://www.linkedin.com/in/kaikcestari/)
 
