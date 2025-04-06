@@ -1,6 +1,6 @@
 <img src="./bannerdev.png" alt="Kaik Cestari Banner" style="width:100%; border-radius:12px;" />
 
-## 👋 Olá! Eu sou o Kaik Cestari
+
 
 🎓 Estudante de Análise e Desenvolvimento de Sistemas  
 💻 Desenvolvedor Back-end em formação, focado em criar APIs robustas e escaláveis  
