@@ -1,6 +1,6 @@
 <img src="./bannerdev.png" alt="Kaik Cestari Banner" style="width:100%; border-radius:12px;" />
 
-
+## 👋 Olá! Eu sou o Kaik Cestari
 
 🎓 Estudante de Análise e Desenvolvimento de Sistemas  
 💻 Desenvolvedor Back-end em formação, focado em criar APIs robustas e escaláveis  
@@ -21,9 +21,10 @@
 ![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 ### 📲 Onde me encontrar
-- (![image](https://github.com/user-attachments/assets/49eecdf2-42b2-4fe1-a082-906dd5757385)) [Instagram](https://www.instagram.com/kaikcestari7/club)
-- 🎵 [TikTok](https://www.tiktok.com/@devkaik7)
-- 💼 [LinkedIn](https://www.linkedin.com/in/kaikcestari/)
+
+[![Instagram](https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/kaikcestari7/club)
+[![TikTok](https://img.shields.io/badge/-TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@devkaik7)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaikcestari/)
 
 ---
 
