@@ -28,4 +28,4 @@
 
 ---
 
-> "Código limpo é aquele que é escrito com clareza, pensado para quem vai manter." – Kaik Cestari 😄
+> "Código limpo é aquele que é escrito com clareza, pensado para quem vai manter." – Kaik Cestari!
