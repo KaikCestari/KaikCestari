@@ -6,7 +6,7 @@
 💻 Desenvolvedor Back-end em formação, focado em criar APIs robustas e escaláveis  
 📚 Estudando Java com Spring Boot, além de ferramentas como Docker e banco de dados relacionais
 
-### 🚧 Em aprendizado
+### Tecnologias:
 - Desenvolvimento de APIs RESTful com **Spring Boot**
 - Containers e ambientes isolados com **Docker**
 - Versionamento com **Git**
