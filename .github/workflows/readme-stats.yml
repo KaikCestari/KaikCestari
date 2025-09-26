@@ -3,7 +3,7 @@ name: Generate GitHub Stats
 on:
   schedule:
     - cron: "0 */12 * * *"   # Atualiza a cada 12h
-  workflow_dispatch:         # Pode rodar manualmente
+  workflow_dispatch:         # Permite rodar manualmente
 
 jobs:
   build:
@@ -24,22 +24,16 @@ jobs:
           cd github-readme-stats
           npm install
 
-      - name: Gerar stats com token privado
-        run: |
-          cd github-readme-stats
-          npm run build
-        env:
-          PAT_1: ${{ secrets.GH_TOKEN }}
-
-      - name: Copiar imagens geradas
+      - name: Gerar stats e linguagens
         run: |
           mkdir -p ./assets
-          cp -r github-readme-stats/generated/* ./assets/
+          curl -o ./assets/stats.svg "https://github-readme-stats.vercel.app/api?username=Kaikcestari&show_icons=true&count_private=true&theme=radical&token=${{ secrets.GH_TOKEN }}"
+          curl -o ./assets/top-langs.svg "https://github-readme-stats.vercel.app/api/top-langs/?username=Kaikcestari&layout=compact&count_private=true&theme=radical&token=${{ secrets.GH_TOKEN }}"
 
       - name: Commit e Push
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "github-actions"
-          git add ./assets
+          git add ./assets/*.svg
           git commit -m "Atualizar stats automáticas" || echo "Nada para atualizar"
           git push
