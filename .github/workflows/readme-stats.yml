@@ -2,38 +2,23 @@ name: Generate GitHub Stats
 
 on:
   schedule:
-    - cron: "0 */12 * * *"   # Atualiza a cada 12h
-  workflow_dispatch:         # Permite rodar manualmente
+    - cron: "0 * * * *" # roda a cada 1h
+  workflow_dispatch: # permite rodar manualmente
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repositório
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Metrics embed
+        uses: lowlighter/metrics@latest
         with:
-          node-version: "18"
-
-      - name: Clonar projeto github-readme-stats
-        run: |
-          git clone https://github.com/anuraghazra/github-readme-stats.git
-          cd github-readme-stats
-          npm install
-
-      - name: Gerar stats e linguagens
-        run: |
-          mkdir -p ./assets
-          curl -o ./assets/stats.svg "https://github-readme-stats.vercel.app/api?username=Kaikcestari&show_icons=true&count_private=true&theme=radical&token=${{ secrets.GH_TOKEN }}"
-          curl -o ./assets/top-langs.svg "https://github-readme-stats.vercel.app/api/top-langs/?username=Kaikcestari&layout=compact&count_private=true&theme=radical&token=${{ secrets.GH_TOKEN }}"
-
-      - name: Commit e Push
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "github-actions"
-          git add ./assets/*.svg
-          git commit -m "Atualizar stats automáticas" || echo "Nada para atualizar"
-          git push
+          filename: assets/github-metrics.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: header, activity, community, repositories, metadata
+          config_timezone: America/Sao_Paulo
+          plugin_languages: yes
+          plugin_languages_ignored: html, css
+          plugin_languages_details: percentage
