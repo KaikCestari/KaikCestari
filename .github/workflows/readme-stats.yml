@@ -1,0 +1,20 @@
+name: Update GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # Atualiza a cada 12h
+  workflow_dispatch:         # Permite rodar manualmente
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v3
+
+      - name: Atualizar README com stats privados
+        uses: anuraghazra/github-readme-stats@master
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
