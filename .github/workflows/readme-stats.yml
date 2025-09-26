@@ -1,9 +1,9 @@
-name: Update GitHub Stats
+name: Generate GitHub Stats
 
 on:
   schedule:
     - cron: "0 */12 * * *"   # Atualiza a cada 12h
-  workflow_dispatch:         # Permite rodar manualmente
+  workflow_dispatch:         # Pode rodar manualmente
 
 jobs:
   build:
@@ -13,8 +13,33 @@ jobs:
       - name: Checkout repositório
         uses: actions/checkout@v3
 
-      - name: Atualizar README com stats privados
-        uses: anuraghazra/github-readme-stats@master
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
 
+      - name: Clonar projeto github-readme-stats
+        run: |
+          git clone https://github.com/anuraghazra/github-readme-stats.git
+          cd github-readme-stats
+          npm install
+
+      - name: Gerar stats com token privado
+        run: |
+          cd github-readme-stats
+          npm run build
+        env:
+          PAT_1: ${{ secrets.GH_TOKEN }}
+
+      - name: Copiar imagens geradas
+        run: |
+          mkdir -p ./assets
+          cp -r github-readme-stats/generated/* ./assets/
+
+      - name: Commit e Push
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "github-actions"
+          git add ./assets
+          git commit -m "Atualizar stats automáticas" || echo "Nada para atualizar"
+          git push
