@@ -1,7 +1,7 @@
 <!-- Banner -->
-![Banner](https://github.com/kaikcestari/kaikcestari/blob/main/assets/banner.png)
+![Banner](./bannerdev.png)
 
-# 💻 Kaik Cestari  
+
 
 👋 Olá, eu sou **Kaik Cestari**!  
 🎯 Desenvolvedor **Backend Java** focado em criar soluções escaláveis, com qualidade de código e boas práticas de arquitetura.  
