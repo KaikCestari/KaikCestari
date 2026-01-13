@@ -36,15 +36,7 @@
 
 <h2>📊 Estatísticas</h2>
 
-<!-- CORRIGIDO: sem table + div inválido -->
-<div align="center">
-  <img height="180"
-    src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=KaikCestari&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&cache_seconds=86400"
-  />
-  <img height="180"
-    src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=KaikCestari&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=86400"
-  />
-</div>
+
 
 <br/>
 
